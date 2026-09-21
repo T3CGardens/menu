@@ -1,22 +1,24 @@
-/* ═══════════════════════════════════════════════════════════
-   T3C GARDENS — js/menu.js
-   SINGLE SOURCE OF TRUTH FOR BUSINESS + MENU CONTENT
+/* ============================================================
+   T3C GARDENS — MENU DATA
+   ------------------------------------------------------------
+   This file contains the content for the digital menu.
 
-   Edit THIS FILE when you need to change:
-   - restaurant/contact details
-   - social links
-   - menu categories
-   - menu items
-   - prices
-   - descriptions
-   - events/leisure information
+   Design/layout lives in:
+      css/style.css
 
-   This file contains the menu supplied by T3C Gardens.
-   ═══════════════════════════════════════════════════════════ */
+   Page structure lives in:
+      index.html
 
-var MENU = {
+   Application behaviour lives in:
+      js/app.js
+   ============================================================ */
 
-  /* ── RESTAURANT ─────────────────────────────────────────── */
+const MENU = {
+
+  /* ==========================================================
+     RESTAURANT
+     ========================================================== */
+
   restaurant: {
 
     name: "T3C Gardens",
@@ -26,6 +28,11 @@ var MENU = {
     heroCopy:
       "Good food, open gardens, drinks, leisure and memorable gatherings in Lilayi, Lusaka.",
 
+
+    /* --------------------------------------------------------
+       Currency
+       -------------------------------------------------------- */
+
     currency: "K",
 
     currencyNote:
@@ -33,19 +40,33 @@ var MENU = {
 
     priceOnRequest: "Ask",
 
-    /* ── Location ─────────────────────────────────────────── */
-    address: "Lilayi Plot 28, Lusaka, Zambia, 10101",
+
+    /* --------------------------------------------------------
+       Location
+       -------------------------------------------------------- */
+
+    address:
+      "Lilayi Plot 28, Lusaka, Zambia, 10101",
+
     city: "Lusaka",
+
     province: "Lusaka",
+
     country: "Zambia",
 
-    mapsUrl:
+    maps:
       "https://maps.app.goo.gl/aoyP43KpesiTsQb4A?g_st=iw",
 
-    /* ── Contact ──────────────────────────────────────────── */
-    phone: "+260 779763404",
 
-    whatsapp: "+260 572222459",
+    /* --------------------------------------------------------
+       Contact
+       -------------------------------------------------------- */
+
+    phone:
+      "+260 779763404",
+
+    whatsapp:
+      "+260 572222459",
 
     whatsappLink:
       "https://wa.me/260572222459",
@@ -53,54 +74,59 @@ var MENU = {
     email:
       "t3cgardens@gmail.com",
 
-    /* ── Opening information ─────────────────────────────── */
-    /*
-      Exact opening times have not been confirmed.
-      "Open Daily" is used instead of inventing times.
-    */
-    hoursSummary: "Open Daily",
+
+    /* --------------------------------------------------------
+       Opening hours
+       -------------------------------------------------------- */
+
+    hoursSummary:
+      "Open Daily",
 
     hours: [],
 
-    /* ── Social media ─────────────────────────────────────── */
-    social: [
-      {
-        label: "Facebook",
-        url: "https://www.facebook.com/p/T3C-Gardens-Events-Centre-Accommodation-100064144957521/"
-      },
-      {
-        label: "Instagram",
-        url: "https://www.instagram.com/t3cgardens_official/"
-      },
-      {
-        label: "TikTok",
-        url: "https://www.tiktok.com/@t3c.gardens"
-      }
-    ],
 
-    /*
-      Leave these empty until genuine T3C assets are supplied.
+    /* --------------------------------------------------------
+       Social media
+       -------------------------------------------------------- */
 
-      logo:
-        Path to the real T3C logo.
+    social: {
 
-      heroImage:
-        Path to a genuine T3C Gardens photograph.
-    */
+      facebook:
+        "https://www.facebook.com/p/T3C-Gardens-Events-Centre-Accommodation-100064144957521/",
+
+      instagram:
+        "https://www.instagram.com/t3cgardens_official/",
+
+      tiktok:
+        "https://www.tiktok.com/@t3c.gardens"
+
+    },
+
+
+    /* --------------------------------------------------------
+       Branding / imagery
+       -------------------------------------------------------- */
+
     logo: "",
 
-    heroImage: "",
+    heroImage:
+      "assets/hero-gardens.jpg",
 
 
-    /* ── More Than A Meal section ─────────────────────────── */
+    /* --------------------------------------------------------
+       Events / leisure
+       -------------------------------------------------------- */
+
     events: {
 
-      title: "More than a meal",
+      title:
+        "More than a meal",
 
       intro:
         "T3C Gardens is a place for outdoor leisure, celebrations and private functions, with gardens, food, drinks and space to enjoy the day or evening.",
 
-      hostLabel: "Host with us",
+      hostLabel:
+        "Host with us",
 
       host: [
         "Weddings",
@@ -109,7 +135,8 @@ var MENU = {
         "Outdoor events"
       ],
 
-      leisureLabel: "At T3C",
+      leisureLabel:
+        "Enjoy the Gardens",
 
       leisure: [
         "Fishing",
@@ -117,38 +144,47 @@ var MENU = {
         "Several bars across the grounds",
         "Grill for yourself"
       ]
+
     }
+
   },
 
 
-  /* ═════════════════════════════════════════════════════════
-     MENU
-     ═════════════════════════════════════════════════════════ */
+  /* ==========================================================
+     MENU CATEGORIES
+     ========================================================== */
 
   categories: [
 
-    /* ── BREAKFAST ────────────────────────────────────────── */
+    /* ========================================================
+       BREAKFAST
+       ======================================================== */
+
     {
       id: "breakfast",
       name: "Breakfast",
-      navLabel: "Breakfast",
 
       items: [
+
         {
           name: "Full English Breakfast",
           price: 260,
           desc:
             "Two eggs, bacon, baked beans, fried or poached tomatoes."
         }
+
       ]
+
     },
 
 
-    /* ── MAIN COURSE ─────────────────────────────────────── */
+    /* ========================================================
+       MAIN COURSE
+       ======================================================== */
+
     {
       id: "main-course",
       name: "Main Course",
-      navLabel: "Main Course",
 
       items: [
 
@@ -219,74 +255,71 @@ var MENU = {
 
         {
           name: "Pork Chops",
-          price: 200,
-          desc: "Served with nshima, rice or chips."
+          price: 200
         },
 
         {
           name: "Smoked Spare Ribs",
-          price: 200,
-          desc: "Served with nshima, rice or chips."
+          price: 200
         },
 
         {
           name: "Smoked T-Bone",
-          price: 200,
-          desc: "Served with nshima, rice or chips."
+          price: 200
         },
 
         {
           name: "Grilled Chuck",
-          price: 200,
-          desc: "Served with nshima, rice or chips."
+          price: 200
         },
 
         {
           name: "Fresh T3C Bream",
-          price: 200,
-          desc: "Served with nshima, rice or chips."
+          price: 200
         }
+
       ]
+
     },
 
 
-    /* ── PLATTERS ─────────────────────────────────────────── */
+    /* ========================================================
+       PLATTERS
+       ======================================================== */
+
     {
       id: "platters",
       name: "Platters",
-      navLabel: "Platters",
 
       items: [
 
         {
           name: "Large Platter",
-          price: 700,
-          desc:
-            "Chops, wings (6), T-bone, drumsticks (6), sausage, samoussas (6), coleslaw."
+          price: 700
         },
 
         {
           name: "Medium Platter",
-          price: 360,
-          desc:
-            "Chops, wings (3), drumsticks (3), sausage, samoussas (3), coleslaw."
+          price: 360
         },
 
         {
           name: "Weekend Special Platter",
-          price: 700,
-          desc:
-            "Chips, wings (4), T-bone, drumsticks (4), sausage, samosas (6), coleslaw."
+          price: 700
         }
+
       ]
+
     },
 
 
-    /* ── MATEBETO ─────────────────────────────────────────── */
+    /* ========================================================
+       MATEBETO / TRADITIONAL
+       ======================================================== */
+
     {
       id: "matebeto",
       name: "Matebeto (Traditional)",
-      navLabel: "Matebeto",
 
       items: [
 
@@ -319,15 +352,19 @@ var MENU = {
           name: "Dry Fish",
           price: 150
         }
+
       ]
+
     },
 
 
-    /* ── SOUPS ────────────────────────────────────────────── */
+    /* ========================================================
+       SOUPS
+       ======================================================== */
+
     {
       id: "soups",
       name: "Soups",
-      navLabel: "Soups",
 
       items: [
 
@@ -340,15 +377,19 @@ var MENU = {
           name: "Vegetable Soup",
           price: 100
         }
+
       ]
+
     },
 
 
-    /* ── SALADS ───────────────────────────────────────────── */
+    /* ========================================================
+       SALADS
+       ======================================================== */
+
     {
       id: "salads",
       name: "Salads",
-      navLabel: "Salads",
 
       items: [
 
@@ -361,18 +402,19 @@ var MENU = {
           name: "T3C Greek Salad",
           price: 120
         }
+
       ]
+
     },
 
 
-    /* ── WEEKEND SPECIALS ────────────────────────────────── */
+    /* ========================================================
+       WEEKEND SPECIALS
+       ======================================================== */
+
     {
       id: "weekend-specials",
       name: "Weekend Specials",
-      navLabel: "Weekend Specials",
-
-      blurb:
-        "Available on weekends.",
 
       items: [
 
@@ -389,413 +431,477 @@ var MENU = {
           desc:
             "Vodka, fruit tequila topped with Coke and premium rum."
         }
+
       ]
+
     },
 
 
-    /* ── BAR & DRINKS ────────────────────────────────────── */
+    /* ========================================================
+       BAR & DRINKS
+       ======================================================== */
+
     {
-      id: "drinks",
+      id: "bar-drinks",
       name: "Bar & Drinks",
-      navLabel: "Drinks",
 
-      items: [
+      groups: [
 
-        /* ───────── SOFT DRINKS ───────── */
-        {
-          name: "Coke",
-          group: "Soft Drinks",
-          price: 20
-        },
+        /* ------------------------------------------------------
+           SOFT DRINKS
+           ------------------------------------------------------ */
 
         {
-          name: "Fanta",
-          group: "Soft Drinks",
-          price: 20
-        },
+          name: "Soft Drinks",
 
-        {
-          name: "Sprite",
-          group: "Soft Drinks",
-          price: 20
-        },
+          items: [
 
-        {
-          name: "Fruiticana",
-          group: "Soft Drinks",
-          price: 20
-        },
+            {
+              name: "Coke",
+              price: 20
+            },
 
+            {
+              name: "Fanta",
+              price: 20
+            },
 
-        /* ───────── BOTTLED LAGERS ───────── */
-        {
-          name: "Mosi Lager",
-          group: "Bottled Lagers",
-          price: 25
-        },
+            {
+              name: "Sprite",
+              price: 20
+            },
 
-        {
-          name: "Castle Lager",
-          group: "Bottled Lagers",
-          price: 25
-        },
+            {
+              name: "Fruiticana",
+              price: 20
+            }
 
-        {
-          name: "Castle Lite",
-          group: "Bottled Lagers",
-          price: 25
-        },
+          ]
 
-        {
-          name: "Mosi Lite",
-          group: "Bottled Lagers",
-          price: 25
-        },
-
-        {
-          name: "Heineken Silver",
-          group: "Bottled Lagers",
-          price: 50
-        },
-
-        {
-          name: "Breezer",
-          group: "Bottled Lagers",
-          price: 50
-        },
-
-        {
-          name: "1664",
-          group: "Bottled Lagers",
-          price: 50
-        },
-
-        {
-          name: "Black Label",
-          group: "Bottled Lagers",
-          price: 30
-        },
-
-        {
-          name: "Budweiser",
-          group: "Bottled Lagers",
-          price: 40
         },
 
 
-        /* ───────── CANNED LAGERS ───────── */
-        {
-          name: "Black Label",
-          group: "Canned Lagers",
-          price: 50
-        },
+        /* ------------------------------------------------------
+           BOTTLED LAGERS
+           ------------------------------------------------------ */
 
         {
-          name: "Heineken",
-          group: "Canned Lagers",
-          price: 50
-        },
+          name: "Bottled Lagers",
 
-        {
-          name: "Windhoek Lager",
-          group: "Canned Lagers",
-          price: 50
-        },
+          items: [
 
-        {
-          name: "Windhoek Draught",
-          group: "Canned Lagers",
-          price: 50
-        },
+            {
+              name: "Mosi Lager",
+              price: 25
+            },
 
-        {
-          name: "Corona",
-          group: "Canned Lagers",
-          price: 50
-        },
+            {
+              name: "Castle Lager",
+              price: 25
+            },
 
-        {
-          name: "Stella",
-          group: "Canned Lagers",
-          price: 50
-        },
+            {
+              name: "Castle Lite",
+              price: 25
+            },
 
+            {
+              name: "Mosi Lite",
+              price: 25
+            },
 
-        /* ───────── CIDERS ───────── */
-        {
-          name: "Hunters Dry",
-          group: "Ciders",
-          price: 50
-        },
+            {
+              name: "Heineken Silver",
+              price: 50
+            },
 
-        {
-          name: "Hunters Gold",
-          group: "Ciders",
-          price: 50
-        },
+            {
+              name: "Breezer",
+              price: 50
+            },
 
-        {
-          name: "Savanna",
-          group: "Ciders",
-          price: 60
-        },
+            {
+              name: "1664",
+              price: 50
+            },
 
-        {
-          name: "Flying Fish",
-          group: "Ciders",
-          price: 60
-        },
+            {
+              name: "Black Label",
+              price: 30
+            },
 
-        {
-          name: "Brutal Fruit",
-          group: "Ciders",
-          price: 60
-        },
+            {
+              name: "Budweiser",
+              price: 40
+            }
 
-        {
-          name: "Belgravia",
-          group: "Ciders",
-          price: 70
+          ]
+
         },
 
 
-        /* ───────── MIXERS ───────── */
-        {
-          name: "Lemonade",
-          group: "Mixers",
-          price: 20
-        },
+        /* ------------------------------------------------------
+           CANNED LAGERS
+           ------------------------------------------------------ */
 
         {
-          name: "Ginger Ale",
-          group: "Mixers",
-          price: 20
-        },
+          name: "Canned Lagers",
 
-        {
-          name: "Soda Water",
-          group: "Mixers",
-          price: 20
-        },
+          items: [
 
-        {
-          name: "Lime Cordial",
-          group: "Mixers",
-          price: 20
-        },
+            {
+              name: "Black Label",
+              price: 50
+            },
 
-        {
-          name: "Grenadine",
-          group: "Mixers",
-          price: 20
-        },
+            {
+              name: "Heineken",
+              price: 50
+            },
 
-        {
-          name: "Passion Fruit",
-          group: "Mixers",
-          price: 20
-        },
+            {
+              name: "Windhoek Lager",
+              price: 50
+            },
 
+            {
+              name: "Windhoek Draught",
+              price: 50
+            },
 
-        /* ───────── SHOOTERS ───────── */
-        {
-          name: "Blow Job",
-          group: "Shooters",
-          price: 100
-        },
+            {
+              name: "Corona",
+              price: 50
+            },
 
-        {
-          name: "Suite Case",
-          group: "Shooters",
-          price: 100
-        },
+            {
+              name: "Stella",
+              price: 50
+            }
 
-        {
-          name: "Spring BOC",
-          group: "Shooters",
-          price: 100
-        },
+          ]
 
-        {
-          name: "Jägerbomb",
-          group: "Shooters",
-          price: 100
         },
 
 
-        /* ───────── COCKTAILS ───────── */
-        {
-          name: "Long Island",
-          group: "Cocktails",
-          price: 150
-        },
+        /* ------------------------------------------------------
+           CIDERS
+           ------------------------------------------------------ */
 
         {
-          name: "Sex on the Beach",
-          group: "Cocktails",
-          price: 150
-        },
+          name: "Ciders",
 
-        {
-          name: "Classic Mojito",
-          group: "Cocktails",
-          price: 150
-        },
+          items: [
 
-        {
-          name: "T3C Blue Lagoon",
-          group: "Cocktails",
-          price: 150
-        },
+            {
+              name: "Hunters Dry",
+              price: 50
+            },
 
-        {
-          name: "Blue Citrus",
-          group: "Cocktails",
-          price: 150
-        },
+            {
+              name: "Hunters Gold",
+              price: 50
+            },
 
-        {
-          name: "Piña Colada",
-          group: "Cocktails",
-          price: 150
-        },
+            {
+              name: "Savanna",
+              price: 60
+            },
 
-        {
-          name: "Cosmopolitan",
-          group: "Cocktails",
-          price: 150
-        },
+            {
+              name: "Flying Fish",
+              price: 60
+            },
 
-        {
-          name: "Whiskey Sour",
-          group: "Cocktails",
-          price: 150
-        },
+            {
+              name: "Brutal Fruit",
+              price: 60
+            },
 
-        {
-          name: "Strawberry Daiquiri",
-          group: "Cocktails",
-          price: 150
+            {
+              name: "Belgravia",
+              price: 70
+            }
+
+          ]
+
         },
 
 
-        /* ───────── MOCKTAILS ───────── */
-        {
-          name: "Malawi Shandy",
-          group: "Mocktails",
-          price: 60
-        },
+        /* ------------------------------------------------------
+           MIXERS
+           ------------------------------------------------------ */
 
         {
-          name: "Rock Shandy Tropical",
-          group: "Mocktails",
-          price: 60
-        },
+          name: "Mixers",
 
-        {
-          name: "Mango Berry Mint",
-          group: "Mocktails",
-          price: 60
-        },
+          items: [
 
-        {
-          name: "Virgin Mojito",
-          group: "Mocktails",
-          price: 70
-        },
+            {
+              name: "Lemonade",
+              price: 20
+            },
 
+            {
+              name: "Ginger Ale",
+              price: 20
+            },
 
-        /* ───────── HOT BEVERAGES ───────── */
-        {
-          name: "Five Roses",
-          group: "Hot Beverages",
-          price: 45
-        },
+            {
+              name: "Soda Water",
+              price: 20
+            },
 
-        {
-          name: "Rooibos",
-          group: "Hot Beverages",
-          price: 45
-        },
+            {
+              name: "Lime Cordial",
+              price: 20
+            },
 
-        {
-          name: "Green Tea",
-          group: "Hot Beverages",
-          price: 45
-        },
+            {
+              name: "Grenadine",
+              price: 20
+            },
 
-        {
-          name: "Mochaccino",
-          group: "Hot Beverages",
-          price: 60
-        },
+            {
+              name: "Passion Fruit",
+              price: 20
+            }
 
-        {
-          name: "Hot Chocolate",
-          group: "Hot Beverages",
-          price: 60
-        },
+          ]
 
-        {
-          name: "Iced Coffee",
-          group: "Hot Beverages",
-          price: 60
-        },
-
-        {
-          name: "Masala Ginger",
-          group: "Hot Beverages",
-          price: 60
-        },
-
-        {
-          name: "Mint Tea",
-          group: "Hot Beverages",
-          price: 60
-        },
-
-        {
-          name: "Espresso",
-          group: "Hot Beverages",
-          price: 50
-        },
-
-        {
-          name: "Americano",
-          group: "Hot Beverages",
-          price: 50
-        },
-
-        /*
-          The supplied menu text lists Green Tea again at K50.
-          It may be a duplicate or a different preparation.
-          It is intentionally retained until the original menu
-          image is checked.
-        */
-        {
-          name: "Green Tea",
-          group: "Hot Beverages",
-          price: 50
         },
 
 
-        /* ───────── MILKSHAKES ───────── */
-        {
-          name: "Vanilla",
-          group: "Milkshakes",
-          price: 100
-        },
+        /* ------------------------------------------------------
+           SHOOTERS
+           ------------------------------------------------------ */
 
         {
-          name: "Strawberry",
-          group: "Milkshakes",
-          price: 100
+          name: "Shooters",
+
+          items: [
+
+            {
+              name: "Blow Job",
+              price: 100
+            },
+
+            {
+              name: "Suite Case",
+              price: 100
+            },
+
+            {
+              name: "Spring BOC",
+              price: 100
+            },
+
+            {
+              name: "Jägerbomb",
+              price: 100
+            }
+
+          ]
+
+        },
+
+
+        /* ------------------------------------------------------
+           COCKTAILS
+           ------------------------------------------------------ */
+
+        {
+          name: "Cocktails",
+
+          items: [
+
+            {
+              name: "Long Island",
+              price: 150
+            },
+
+            {
+              name: "Sex on the Beach",
+              price: 150
+            },
+
+            {
+              name: "Classic Mojito",
+              price: 150
+            },
+
+            {
+              name: "T3C Blue Lagoon",
+              price: 150
+            },
+
+            {
+              name: "Blue Citrus",
+              price: 150
+            },
+
+            {
+              name: "Piña Colada",
+              price: 150
+            },
+
+            {
+              name: "Cosmopolitan",
+              price: 150
+            },
+
+            {
+              name: "Whiskey Sour",
+              price: 150
+            },
+
+            {
+              name: "Strawberry Daiquiri",
+              price: 150
+            }
+
+          ]
+
+        },
+
+
+        /* ------------------------------------------------------
+           MOCKTAILS
+           ------------------------------------------------------ */
+
+        {
+          name: "Mocktails",
+
+          items: [
+
+            {
+              name: "Malawi Shandy",
+              price: 60
+            },
+
+            {
+              name: "Rock Shandy Tropical",
+              price: 60
+            },
+
+            {
+              name: "Mango Berry Mint",
+              price: 60
+            },
+
+            {
+              name: "Virgin Mojito",
+              price: 70
+            }
+
+          ]
+
+        },
+
+
+        /* ------------------------------------------------------
+           HOT BEVERAGES
+           ------------------------------------------------------ */
+
+        {
+          name: "Hot Beverages",
+
+          items: [
+
+            {
+              name: "Five Roses",
+              price: 45
+            },
+
+            {
+              name: "Rooibos",
+              price: 45
+            },
+
+            {
+              name: "Green Tea",
+              price: 45
+            },
+
+            {
+              name: "Mochaccino",
+              price: 60
+            },
+
+            {
+              name: "Hot Chocolate",
+              price: 60
+            },
+
+            {
+              name: "Iced Coffee",
+              price: 60
+            },
+
+            {
+              name: "Masala Ginger",
+              price: 60
+            },
+
+            {
+              name: "Mint Tea",
+              price: 60
+            },
+
+            {
+              name: "Espresso",
+              price: 50
+            },
+
+            {
+              name: "Americano",
+              price: 50
+            },
+
+            {
+              name: "Green Tea",
+              price: 50
+            }
+
+          ]
+
+        },
+
+
+        /* ------------------------------------------------------
+           MILKSHAKES
+           ------------------------------------------------------ */
+
+        {
+          name: "Milkshakes",
+
+          items: [
+
+            {
+              name: "Vanilla",
+              price: 100
+            },
+
+            {
+              name: "Strawberry",
+              price: 100
+            }
+
+          ]
+
         }
+
       ]
+
     }
+
   ]
+
 };
 
 
-/* ── Make the data available to app.js ───────────────────── */
+/* ============================================================
+   EXPOSE MENU DATA
+   ============================================================ */
+
 window.MENU = MENU;
