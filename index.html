@@ -6,22 +6,11 @@
 <meta name="theme-color" content="#070a08">
 <meta name="description" content="T3C Gardens — Outdoor Events | Leisure Drops. Menu, gardens, bars and leisure in Lilayi, Lusaka.">
 
-<!-- ============================================================
-     T3C GARDENS — DIGITAL MENU
-     ------------------------------------------------------------
-     This file is the PAGE STRUCTURE. You normally do NOT edit it.
-
-     Content (dishes, prices, contact details, event text) lives in:
-        js/menu.js
-     Design (colours, type, spacing) lives in:
-        css/style.css
-     ============================================================ -->
-
 <title>T3C Gardens — Menu</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -32,70 +21,66 @@
 
 <a class="skip-link" href="#menu">Skip to menu</a>
 
-
-<!-- ══════════════════════════════════════════════════════════
+<!-- ============================================================
      HERO
-     Kept deliberately compact so the menu is only a short
-     scroll (or one tap) away. Text comes from js/menu.js.
-     ══════════════════════════════════════════════════════════ -->
-<header class="hero" id="top">
+     ============================================================ -->
 
-  <div class="hero__bg" aria-hidden="true">
-    <span class="hero__glow hero__glow--green"></span>
-    <span class="hero__glow hero__glow--warm"></span>
-    <!-- faint botanical line-work: texture, not decoration -->
-    <svg class="hero__botanical" viewBox="0 0 220 220" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
-      <path d="M186 226c0-52-16-90-50-116"/>
-      <path d="M138 118c-19-3-32-14-38-31 17-4 32 3 42 18"/>
-      <path d="M162 156c-17-9-26-22-26-41 17 3 28 14 32 31"/>
-      <path d="M116 96c-15-11-21-24-19-43 15 7 23 18 25 35"/>
-      <path d="M74 250c0-38-12-66-36-84"/>
-      <path d="M40 168c-14-3-23-11-27-24 13-3 23 2 30 13"/>
-    </svg>
+<header class="hero" id="top">
+  <div class="hero__media" aria-hidden="true">
+    <img src="assets/hero-gardens.jpg" alt="" class="hero__image">
+    <div class="hero__overlay"></div>
   </div>
 
   <div class="hero__inner">
 
-    <!-- TYPOGRAPHIC WORDMARK.
-         To use a real logo later, set  logo: "assets/logo.png"
-         in js/menu.js — this block is replaced automatically and
-         the business name stays in the page for screen readers. -->
-    <div class="hero__brand" id="brandSlot">
-      <h1 class="brand__name" data-fill="name">T3C Gardens</h1>
+    <div class="hero__content">
+
+      <div class="hero__brand" id="brandSlot">
+        <h1 class="brand__name" data-fill="name">T3C Gardens</h1>
+      </div>
+
+      <p class="hero__eyebrow">Lilayi · Lusaka</p>
+
+      <p class="hero__tagline" data-fill="tagline"></p>
+
+      <p class="hero__copy" data-fill="heroCopy"></p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#menu">View Menu</a>
+        <a class="btn btn--ghost" data-link="maps" href="#" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+
+      <p class="hero__status">
+        <span class="pill" id="openPill"></span>
+      </p>
+
     </div>
 
-    <p class="hero__tagline" data-fill="tagline"></p>
-
-    <p class="hero__copy" data-fill="heroCopy"></p>
-
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="#menu">View Menu</a>
-      <a class="btn btn--ghost" data-link="maps" href="#" target="_blank" rel="noopener">Get Directions</a>
+    <div class="hero__caption">
+      <span class="hero__caption-line"></span>
+      <span>Outdoor Events · Leisure Drops</span>
     </div>
-
-    <p class="hero__status"><span class="pill" id="openPill"></span></p>
 
   </div>
 </header>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     STICKY CATEGORY BAR + SEARCH
-     On phones the search appears as a button and expands to
-     fill the bar, so the category rail is never squashed.
-     ══════════════════════════════════════════════════════════ -->
-<nav class="navbar" id="navbar" aria-label="Menu categories and search">
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
 
+<nav class="navbar" id="navbar" aria-label="Menu categories and search">
   <div class="navbar__inner">
 
-    <div class="navbar__cats" id="categoryNav" aria-label="Menu categories">
-      <!-- Category buttons are generated by js/app.js -->
-    </div>
+    <div class="navbar__cats" id="categoryNav" aria-label="Menu categories"></div>
 
     <div class="search" id="searchWrap">
 
       <span class="search__icon" aria-hidden="true">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="M20 20l-3.5-3.5"/>
+        </svg>
       </span>
 
       <input
@@ -105,14 +90,33 @@
         placeholder="Search the menu…"
         aria-label="Search the menu"
         autocomplete="off"
-        enterkeyhint="search">
+        enterkeyhint="search"
+      >
 
-      <button type="button" class="search__toggle" id="searchToggle" aria-label="Search the menu" aria-expanded="false" aria-controls="searchInput">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <button
+        type="button"
+        class="search__toggle"
+        id="searchToggle"
+        aria-label="Search the menu"
+        aria-expanded="false"
+        aria-controls="searchInput"
+      >
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="M20 20l-3.5-3.5"/>
+        </svg>
       </button>
 
-      <button type="button" class="search__clear" id="searchClear" aria-label="Clear search" hidden>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <button
+        type="button"
+        class="search__clear"
+        id="searchClear"
+        aria-label="Clear search"
+        hidden
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
       </button>
 
     </div>
@@ -121,129 +125,375 @@
 </nav>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     THE MENU
-     ══════════════════════════════════════════════════════════ -->
+<!-- ============================================================
+     MAIN
+     ============================================================ -->
+
 <main id="menu">
+
+  <!-- ==========================================================
+       FOOD FEATURE
+       ========================================================== -->
+
+  <section class="feature feature--food" aria-labelledby="foodFeatureTitle">
+
+    <div class="feature__image-wrap">
+      <img
+        src="assets/food-platter.jpg"
+        alt="A platter of food"
+        class="feature__image"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="feature__content">
+      <p class="section-kicker">From the kitchen</p>
+      <h2 id="foodFeatureTitle">Good food. No rush.</h2>
+      <p>
+        From familiar favourites to hearty platters and traditional dishes,
+        enjoy good food in the open surroundings of T3C Gardens.
+      </p>
+      <a class="feature__link" href="#menu">Explore the menu <span>↓</span></a>
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================================
+       MENU
+       ========================================================== -->
+
   <div class="container">
 
     <div class="menu-head">
-      <h2 class="menu-head__title">Our Menu</h2>
+      <div>
+        <p class="section-kicker">T3C Gardens</p>
+        <h2 class="menu-head__title">Our Menu</h2>
+      </div>
+
       <p class="menu-head__note" id="currencyNote"></p>
     </div>
 
     <div class="results-bar" id="resultsBar" hidden>
       <p id="resultsText"></p>
-      <button type="button" class="results-bar__reset" id="resetBtn">Show full menu</button>
+      <button type="button" class="results-bar__reset" id="resetBtn">
+        Show full menu
+      </button>
     </div>
 
     <noscript>
-      <p class="noscript">This menu needs JavaScript to display. Please ask our team for a printed menu.</p>
+      <p class="noscript">
+        This menu needs JavaScript to display. Please ask our team for a printed menu.
+      </p>
     </noscript>
 
-    <!-- Every category and item is generated here from js/menu.js -->
     <div id="menuRoot"></div>
 
   </div>
+
+
+  <!-- ==========================================================
+       BAR FEATURE
+       ========================================================== -->
+
+  <section class="bar-feature" aria-labelledby="barFeatureTitle">
+
+    <div class="bar-feature__grid">
+
+      <div class="bar-feature__image bar-feature__image--beer">
+        <img
+          src="assets/beer.jpg"
+          alt="Beer being poured into a glass"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="bar-feature__content">
+        <p class="section-kicker">At the bar</p>
+        <h2 id="barFeatureTitle">Drinks, poured properly.</h2>
+        <p>
+          Cold lagers, ciders, cocktails, mocktails and something for
+          every kind of afternoon or evening at the Gardens.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="cocktail-feature">
+
+      <div class="cocktail-feature__content">
+        <p class="section-kicker">Weekend specials</p>
+        <h2>Something a little different.</h2>
+
+        <div class="specials">
+          <div class="special">
+            <span class="special__name">Passion Fruit Mojito</span>
+            <span class="special__price">K70</span>
+          </div>
+
+          <div class="special">
+            <span class="special__name">Blue Island Ice Rum</span>
+            <span class="special__price">K150</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cocktail-feature__image">
+        <img
+          src="assets/cocktail.jpg"
+          alt="Four cocktails arranged on a bar counter"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================================
+       CHARCOAL DETAIL
+       ========================================================== -->
+
+  <section class="grill-strip" aria-label="Grill atmosphere">
+
+    <div class="grill-strip__image">
+      <img
+        src="assets/grill-charcoal.jpg"
+        alt=""
+        loading="lazy"
+      >
+    </div>
+
+    <div class="grill-strip__content">
+      <span class="grill-strip__line"></span>
+      <p>Grill · Gather · Enjoy</p>
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================================
+       LEISURE / EVENTS
+       ========================================================== -->
+
+  <section class="experience" aria-labelledby="experienceTitle">
+
+    <div class="container">
+
+      <div class="experience__heading">
+        <p class="section-kicker">The T3C experience</p>
+        <h2 id="experienceTitle">More than a meal.</h2>
+        <p>
+          Come for the food and drinks. Stay for the gardens, leisure,
+          celebrations and the space to simply enjoy the day.
+        </p>
+      </div>
+
+      <div class="experience__gallery">
+
+        <figure class="experience-card experience-card--main">
+          <img
+            src="assets/gardens-leisure.jpg"
+            alt="Green gardens and open grounds at T3C Gardens"
+            loading="lazy"
+          >
+          <figcaption>
+            <span>01</span>
+            Gardens & open grounds
+          </figcaption>
+        </figure>
+
+        <figure class="experience-card experience-card--portrait">
+          <img
+            src="assets/twix.jpg"
+            alt="Leisure by the pool"
+            loading="lazy"
+          >
+          <figcaption>
+            <span>02</span>
+            Leisure
+          </figcaption>
+        </figure>
+
+      </div>
+
+    </div>
+
+  </section>
+
 </main>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     FOOTER — leisure & events, then contact
-     ══════════════════════════════════════════════════════════ -->
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+
 <footer class="footer" id="visit">
+
   <div class="container">
 
-    <!-- More than a meal -->
     <section class="events" aria-labelledby="eventsTitle">
-      <h2 class="events__title" id="eventsTitle"></h2>
-      <p class="events__intro" id="eventsIntro"></p>
 
-      <div class="events__block">
-        <p class="events__label" id="eventsHostLabel"></p>
-        <ul class="events__list" id="eventsHost"></ul>
+      <div class="events__heading">
+        <p class="section-kicker">Bring people together</p>
+        <h2 class="events__title" id="eventsTitle"></h2>
+        <p class="events__intro" id="eventsIntro"></p>
       </div>
 
-      <div class="events__block">
-        <p class="events__label" id="eventsLeisureLabel"></p>
-        <ul class="events__list" id="eventsLeisure"></ul>
+      <div class="events__columns">
+
+        <div class="events__block">
+          <p class="events__label" id="eventsHostLabel"></p>
+          <ul class="events__list" id="eventsHost"></ul>
+        </div>
+
+        <div class="events__block">
+          <p class="events__label" id="eventsLeisureLabel"></p>
+          <ul class="events__list" id="eventsLeisure"></ul>
+        </div>
+
       </div>
+
     </section>
 
 
-    <!-- Contact -->
     <div class="visit">
-      <h2 class="visit__title">Visit T3C Gardens</h2>
+
+      <div class="visit__heading">
+        <p class="section-kicker">Find us</p>
+        <h2 class="visit__title">Visit T3C Gardens</h2>
+      </div>
 
       <div class="visit__grid">
 
         <section class="info-card">
           <h3 class="info-card__head">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
             Location
           </h3>
+
           <p data-fill="location"></p>
+
           <p class="info-card__sub">
-            <a data-link="maps" href="#" target="_blank" rel="noopener" class="info-card__link">Open in Google Maps ↗</a>
+            <a
+              data-link="maps"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              class="info-card__link"
+            >
+              Open in Google Maps ↗
+            </a>
           </p>
         </section>
 
+
         <section class="info-card">
           <h3 class="info-card__head">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 5.18 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L9 10.73a16 16 0 0 0 4.27 4.27l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/>
+            </svg>
             Phone
           </h3>
-          <p><a data-link="phone" href="#"></a></p>
+
+          <p>
+            <a data-link="phone" href="#"></a>
+          </p>
         </section>
+
 
         <section class="info-card">
           <h3 class="info-card__head">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.2-.6L3 21l1.7-5.1A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.1A8 8 0 1 1 20 11.5Z"/>
+              <path d="M8.5 9.5c.3 2 2 3.7 4 4l1.3-1.3c.2-.2.5-.3.8-.2l1.5.5"/>
+            </svg>
             WhatsApp
           </h3>
-          <p><a data-link="whatsapp" href="#" target="_blank" rel="noopener"></a></p>
+
+          <p>
+            <a
+              data-link="whatsapp"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            ></a>
+          </p>
         </section>
+
 
         <section class="info-card">
           <h3 class="info-card__head">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
             Email
           </h3>
-          <p><a data-link="email" href="#"></a></p>
+
+          <p>
+            <a data-link="email" href="#"></a>
+          </p>
         </section>
 
-        <!-- Removed automatically if js/menu.js has no hours list -->
+
         <section class="info-card info-card--wide" id="hoursCard">
+
           <h3 class="info-card__head">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 2"/>
+            </svg>
             Opening Hours
           </h3>
+
           <ul class="hours" id="hoursList"></ul>
+
         </section>
 
       </div>
 
+
       <div class="visit__actions">
-        <a class="btn btn--ghost btn--small" data-link="maps" href="#" target="_blank" rel="noopener">Get Directions</a>
+        <a
+          class="btn btn--ghost btn--small"
+          data-link="maps"
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
+          Get Directions
+        </a>
       </div>
 
       <div class="social" id="socialLinks"></div>
+
     </div>
 
 
     <div class="footer__bottom">
+
       <p class="footer__brand" data-fill="name"></p>
-      <p class="footer__fine">Digital menu · <span id="year"></span></p>
-      <p class="footer__fine"><a href="#top">Back to top ↑</a></p>
+
+      <p class="footer__fine">
+        Digital menu · <span id="year"></span>
+      </p>
+
+      <p class="footer__fine">
+        <a href="#top">Back to top ↑</a>
+      </p>
+
     </div>
 
   </div>
+
 </footer>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     SCRIPTS — menu.js must load first.
-     ══════════════════════════════════════════════════════════ -->
 <script src="js/menu.js"></script>
 <script src="js/app.js"></script>
 
