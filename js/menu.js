@@ -333,7 +333,7 @@ const MENU = {
 
         {
           name: "Large Platter",
-          price: 700,
+          price: 770,
           desc: "Chips, wings (4), T-bone, drumsticks (4), sausage, samosas (6), coleslaw."
         },
 
@@ -927,12 +927,12 @@ const MENU = {
 
             {
               name: "Rock Shandy Tropical Mango",
-              price: 60
+              price: 70
             },
 
             {
               name: "Mango Berry Mint",
-              price: 60
+              price: 70
             },
 
             {
