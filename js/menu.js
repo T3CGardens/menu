@@ -183,9 +183,9 @@ const MENU = {
 
         {
           name: "Full English Breakfast",
-          price: 260,
+          price: 160,
           desc:
-            "Two eggs, bacon, baked beans, fried or poached tomatoes."
+            "Two eggs, bacon, baked beans, beef or pork chipolata."
         }
 
       ]
@@ -200,29 +200,36 @@ const MENU = {
     {
       id: "main-course",
       name: "Main Course",
+      combineSamePrice: true,
 
       items: [
 
         {
-          name: "Chicken Stir Fry",
+          name: "Chicken Stir-Fry",
           price: 180,
-          desc: "Served with rice."
+          desc: "Chicken prepared in a savoury stir-fry. Served with rice."
         },
 
         {
           name: "Chicken Wings (4)",
-          price: 140,
-          desc: "Served with nshima, rice or chips."
+          price: 180,
+          desc: "Four chicken wings. Served with nshima, rice or chips."
         },
 
         {
-          name: "Chicken Wraps",
-          price: 190,
-          desc: "Served with chips."
+          name: "Chicken Wrap",
+          price: 180,
+          desc: "Chicken served in a wrap. Served with chips."
         },
 
         {
-          name: "1/4 Chicken",
+          name: "Chicken Nuggets",
+          price: 180,
+          desc: "Bite-sized breaded chicken pieces. Served with a choice of nshima, rice or chips."
+        },
+
+        {
+          name: "Quarter Chicken (1/4 Chicken)",
           price: 180,
           desc: "Served with nshima, rice or chips."
         },
@@ -230,36 +237,37 @@ const MENU = {
         {
           name: "Chicken Drumsticks (4)",
           price: 180,
-          desc: "Served with nshima, rice or chips."
+          desc: "Four chicken drumsticks. Served with nshima, rice or chips."
         },
 
         {
           name: "French Quails (2)",
           price: 180,
-          desc: "Served with nshima or rice."
+          desc: "Two French quails. Served with nshima or rice."
         },
 
         {
           name: "Beef Stew",
-          price: 170,
-          desc: "Served with nshima."
+          price: 180,
+          desc: "Beef slowly cooked in a savoury stew. Served with rice."
         },
 
         {
-          name: "Beef Stir Fry",
-          price: 170,
-          desc: "Served with rice."
+          name: "Beef Stir-Fry",
+          price: 180,
+          desc: "Beef prepared in a savoury stir-fry. Served with rice."
         },
 
         {
           name: "Beef Bolognese",
-          price: 180
+          price: 180,
+          desc: "Beef in a tomato-based Bolognese sauce. Served with a choice of nshima, rice or chips."
         },
 
         {
           name: "Boerewors Sausage",
           price: 180,
-          desc: "Served with nshima, rice or chips."
+          desc: "A seasoned traditional sausage. Served with nshima, rice or chips."
         },
 
         {
@@ -270,27 +278,42 @@ const MENU = {
 
         {
           name: "Pork Chops",
-          price: 200
+          price: 200,
+          desc: "Pork chops prepared by the kitchen. Served with a choice of nshima, rice or chips."
         },
 
         {
           name: "Smoked Spare Ribs",
-          price: 200
+          price: 200,
+          desc: "Served with a choice of nshima, rice or chips."
         },
 
         {
           name: "Smoked T-Bone",
-          price: 200
+          price: 200,
+          desc: "Served with a choice of nshima, rice or chips."
         },
 
         {
-          name: "Grilled Chuck",
-          price: 200
+          name: "Grilled Chuck Steak",
+          price: 200,
+          desc: "Chuck steak grilled by the kitchen. Served with a choice of nshima, rice or chips."
         },
 
         {
-          name: "Fresh T3C Bream",
-          price: 200
+          name: "T3C Bream",
+          price: 200,
+          desc: "Bream sourced from one of the ponds at T3C Gardens. Served with a choice of nshima, rice or chips."
+        },
+
+        {
+          name: "Plain Chips",
+          price: 50
+        },
+
+        {
+          name: "Plain Nshima",
+          price: 50
         }
 
       ]
@@ -310,17 +333,14 @@ const MENU = {
 
         {
           name: "Large Platter",
-          price: 700
+          price: 700,
+          desc: "Chips, wings (4), T-bone, drumsticks (4), sausage, samosas (6), coleslaw."
         },
 
         {
           name: "Medium Platter",
-          price: 360
-        },
-
-        {
-          name: "Weekend Special Platter",
-          price: 700
+          price: 360,
+          desc: "Chips, wings (2), drumsticks (2), sausage, samosas (3), coleslaw."
         }
 
       ]
@@ -335,6 +355,7 @@ const MENU = {
     {
       id: "matebeto",
       name: "Matebeto (Traditional)",
+      combineSamePrice: true,
 
       items: [
 
@@ -355,11 +376,12 @@ const MENU = {
 
         {
           name: "Vimbombo",
-          price: 150
+          price: 200
         },
 
         {
           name: "Oxtail",
+      combineSamePrice: true,
           price: 150
         },
 
@@ -380,6 +402,7 @@ const MENU = {
     {
       id: "soups",
       name: "Soups",
+      combineSamePrice: true,
 
       items: [
 
@@ -410,12 +433,14 @@ const MENU = {
 
         {
           name: "T3C Green Salad",
-          price: 100
+          price: 100,
+          desc: "A fresh garden salad. Ask your waiter about available additions."
         },
 
         {
           name: "T3C Greek Salad",
-          price: 120
+          price: 100,
+          desc: "Tomato, cucumber, red onion, green pepper, olives and feta cheese, finished with an olive oil and herb dressing."
         }
 
       ]
@@ -468,6 +493,7 @@ const MENU = {
 
         {
           name: "Soft Drinks",
+          combineSamePrice: true,
 
           items: [
 
@@ -482,6 +508,11 @@ const MENU = {
             },
 
             {
+              name: "Minute Maid",
+              price: 20
+            },
+
+            {
               name: "Sprite",
               price: 20
             },
@@ -489,6 +520,11 @@ const MENU = {
             {
               name: "Fruiticana",
               price: 20
+            },
+
+            {
+              name: "Water",
+              price: 10
             }
 
           ]
@@ -497,11 +533,12 @@ const MENU = {
 
 
         /* ------------------------------------------------------
-           BOTTLED LAGERS
+           BOTTLED LAGERS & COOLERS
            ------------------------------------------------------ */
 
         {
-          name: "Bottled Lagers",
+          name: "Bottled Lagers & Coolers",
+          combineSamePrice: true,
 
           items: [
 
@@ -511,12 +548,12 @@ const MENU = {
             },
 
             {
-              name: "Castle Lager",
+              name: "Castle Lager Bottle",
               price: 25
             },
 
             {
-              name: "Castle Lite",
+              name: "Castle Lite Bottle",
               price: 25
             },
 
@@ -531,23 +568,43 @@ const MENU = {
             },
 
             {
-              name: "Breezer",
-              price: 50
-            },
-
-            {
               name: "1664",
               price: 50
             },
 
             {
-              name: "Black Label",
+              name: "Carling Black Label Bottle",
               price: 30
             },
 
             {
               name: "Budweiser",
+              price: 60
+            },
+
+            {
+              name: "Amstel",
+              price: 50
+            },
+
+            {
+              name: "Stella Artois Bottle",
+              price: 50
+            },
+
+            {
+              name: "Carling Black Label Dumpie",
               price: 40
+            },
+
+            {
+              name: "Castle Lite Dumpie",
+              price: 40
+            },
+
+            {
+              name: "Circa 1430 Spirit Cooler",
+              price: 50
             }
 
           ]
@@ -561,16 +618,27 @@ const MENU = {
 
         {
           name: "Canned Lagers",
+          combineSamePrice: true,
 
           items: [
 
             {
-              name: "Black Label",
+              name: "Carling Black Label Can",
               price: 50
             },
 
             {
-              name: "Heineken",
+              name: "Heineken Can",
+              price: 50
+            },
+
+            {
+              name: "Castle Lager Can",
+              price: 40
+            },
+
+            {
+              name: "Castle Lite Can",
               price: 50
             },
 
@@ -590,7 +658,7 @@ const MENU = {
             },
 
             {
-              name: "Stella",
+              name: "Stella Artois Can",
               price: 50
             }
 
@@ -605,6 +673,7 @@ const MENU = {
 
         {
           name: "Ciders",
+          combineSamePrice: true,
 
           items: [
 
@@ -619,18 +688,43 @@ const MENU = {
             },
 
             {
-              name: "Savanna",
-              price: 60
+              name: "Savanna Dry",
+              price: 50
             },
 
             {
-              name: "Flying Fish",
-              price: 60
+              name: "Flying Fish Bottle",
+              price: 50
             },
 
             {
-              name: "Brutal Fruit",
-              price: 60
+              name: "Flying Fish Can",
+              price: 50
+            },
+
+            {
+              name: "Brutal Fruit Bottle",
+              price: 50
+            },
+
+            {
+              name: "Brutal Fruit Can",
+              price: 50
+            },
+
+            {
+              name: "Breezer",
+              price: 50
+            },
+
+            {
+              name: "Fruit Tree",
+              price: 50
+            },
+
+            {
+              name: "Pure Joy",
+              price: 50
             },
 
             {
@@ -649,8 +743,19 @@ const MENU = {
 
         {
           name: "Mixers",
+          combineSamePrice: true,
 
           items: [
+
+            {
+              name: "Tonic Water",
+              price: 20
+            },
+
+            {
+              name: "Tonic Soda",
+              price: 20
+            },
 
             {
               name: "Lemonade",
@@ -669,7 +774,7 @@ const MENU = {
 
             {
               name: "Lime Cordial",
-              price: 20
+              price: 30
             },
 
             {
@@ -679,7 +784,17 @@ const MENU = {
 
             {
               name: "Passion Fruit",
-              price: 20
+              price: 30
+            },
+
+            {
+              name: "Brothers",
+              price: 30
+            },
+
+            {
+              name: "Red Bull",
+              price: 50
             }
 
           ]
@@ -693,6 +808,7 @@ const MENU = {
 
         {
           name: "Shooters",
+          combineSamePrice: true,
 
           items: [
 
@@ -707,7 +823,7 @@ const MENU = {
             },
 
             {
-              name: "Spring BOC",
+              name: "Springbok",
               price: 100
             },
 
@@ -732,22 +848,32 @@ const MENU = {
 
             {
               name: "Long Island",
-              price: 150
+              price: 200,
+              desc: "Vodka, white rum, tequila, gin, triple sec, lemon juice, simple syrup and cola."
+            },
+
+            {
+              name: "Blue Floating Bar",
+              price: 200,
+              desc: "Try our Blue Floating Bar cocktail at our actual floating bar on the pond."
             },
 
             {
               name: "Sex on the Beach",
-              price: 150
+              price: 150,
+              desc: "Vodka, peach schnapps, orange juice and cranberry juice."
             },
 
             {
               name: "Classic Mojito",
-              price: 150
+              price: 150,
+              desc: "White rum, fresh mint, lime, simple syrup and soda water."
             },
 
             {
               name: "T3C Blue Lagoon",
-              price: 150
+              price: 150,
+              desc: "Classic Blue Lagoon-style combination of vodka, blue curaçao and lemonade."
             },
 
             {
@@ -757,22 +883,26 @@ const MENU = {
 
             {
               name: "Piña Colada",
-              price: 150
+              price: 150,
+              desc: "Rum, cream of coconut, pineapple juice and lime."
             },
 
             {
               name: "Cosmopolitan",
-              price: 150
+              price: 150,
+              desc: "Citrus vodka, triple sec, cranberry juice and lime."
             },
 
             {
               name: "Whiskey Sour",
-              price: 150
+              price: 150,
+              desc: "Whiskey, lemon juice and simple syrup; egg white is optional in a classic recipe."
             },
 
             {
               name: "Strawberry Daiquiri",
-              price: 150
+              price: 150,
+              desc: "Rum, strawberries, lime juice and simple syrup."
             }
 
           ]
@@ -786,6 +916,7 @@ const MENU = {
 
         {
           name: "Mocktails",
+          combineSamePrice: true,
 
           items: [
 
@@ -795,7 +926,7 @@ const MENU = {
             },
 
             {
-              name: "Rock Shandy Tropical",
+              name: "Rock Shandy Tropical Mango",
               price: 60
             },
 
@@ -806,6 +937,31 @@ const MENU = {
 
             {
               name: "Virgin Mojito",
+              price: 70
+            },
+
+            {
+              name: "Freshly Squeezed Strawberry Lemonade",
+              price: 70
+            },
+
+            {
+              name: "Fresh Passion Fruit",
+              price: 70
+            },
+
+            {
+              name: "Fresh Mint Lemonade",
+              price: 70
+            },
+
+            {
+              name: "Blue Lemonade",
+              price: 70
+            },
+
+            {
+              name: "Berry Mint",
               price: 70
             }
 
@@ -820,64 +976,90 @@ const MENU = {
 
         {
           name: "Hot Beverages",
+          combineSamePrice: true,
 
           items: [
 
             {
-              name: "Five Roses",
-              price: 45
+              name: "Five Roses Tea",
+              price: 40,
+              desc: "A classic black tea."
             },
 
             {
-              name: "Rooibos",
-              price: 45
+              name: "Rooibos Tea",
+              price: 40,
+              desc: "A naturally caffeine-free herbal tea."
             },
 
             {
               name: "Green Tea",
-              price: 45
+              price: 45,
+              desc: "A light green tea."
             },
 
             {
               name: "Mochaccino",
-              price: 60
+              price: 80,
+              desc: "Espresso with chocolate and steamed milk."
             },
 
             {
               name: "Hot Chocolate",
-              price: 60
-            },
-
-            {
-              name: "Iced Coffee",
-              price: 60
+              price: 80,
+              desc: "A warm chocolate drink."
             },
 
             {
               name: "Masala Ginger",
-              price: 60
+              price: 60,
+              desc: "A warming blend of masala spices and ginger."
+            },
+
+            {
+              name: "Masala Tea",
+              price: 60,
+              desc: "Tea brewed with warming spices."
+            },
+
+            {
+              name: "Ginger Tea",
+              price: 60,
+              desc: "A hot ginger infusion."
             },
 
             {
               name: "Mint Tea",
-              price: 60
+              price: 60,
+              desc: "A refreshing mint infusion."
             },
 
             {
               name: "Espresso",
-              price: 50
+              price: 50,
+              desc: "A short, concentrated coffee."
             },
 
             {
               name: "Americano",
-              price: 50
-            },
-
-            {
-              name: "Green Tea",
-              price: 50
+              price: 50,
+              desc: "Espresso topped with hot water."
             }
 
+          ]
+
+        },
+
+        {
+          name: "Cold Coffee",
+          combineSamePrice: true,
+
+          items: [
+            {
+              name: "Iced Coffee",
+              price: 100,
+              desc: "Chilled coffee served over ice."
+            }
           ]
 
         },
@@ -889,6 +1071,7 @@ const MENU = {
 
         {
           name: "Milkshakes",
+          combineSamePrice: true,
 
           items: [
 
