@@ -211,6 +211,54 @@
   };
 
 
+  const combineSamePriceItems = (items) => {
+
+    const canCombine = (item) => {
+      const hasTags = Array.isArray(item.tags)
+        ? item.tags.length > 0
+        : Boolean(item.tags);
+
+      return Number.isFinite(Number(item.price)) &&
+        item.price !== "" &&
+        !item.desc &&
+        !item.image &&
+        !item.unavailable &&
+        !hasTags;
+    };
+
+    const usedPrices = new Set();
+
+    return items.flatMap((item) => {
+      if (!canCombine(item)) {
+        return [item];
+      }
+
+      const price = Number(item.price);
+
+      if (usedPrices.has(price)) {
+        return [];
+      }
+
+      usedPrices.add(price);
+
+      const matchingItems = items.filter(
+        (candidate) =>
+          canCombine(candidate) &&
+          Number(candidate.price) === price
+      );
+
+      return matchingItems.length > 1
+        ? [{
+            ...item,
+            name: matchingItems
+              .map((matchingItem) => matchingItem.name)
+              .join(", ")
+          }]
+        : [item];
+    });
+  };
+
+
   /* ==========================================================
      PHOTO BREAKS BETWEEN MENU SECTIONS
      ========================================================== */
@@ -772,7 +820,8 @@
                 name: "",
                 items: Array.isArray(category.items)
                   ? category.items
-                  : []
+                  : [],
+                combineSamePrice: category.combineSamePrice
               }]
 
       })
@@ -791,6 +840,10 @@
               Array.isArray(group.items)
                 ? group.items
                 : [];
+
+            const displayedItems = group.combineSamePrice
+              ? combineSamePriceItems(items)
+              : items;
 
 
             return `
@@ -818,7 +871,7 @@
 
                 <ul class="menu-items">
 
-                  ${items
+                  ${displayedItems
                     .map(itemHTML)
                     .join("")}
 
