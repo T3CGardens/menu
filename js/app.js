@@ -920,6 +920,9 @@
         </header>
 
 
+        ${category.note ? `<p class="menu-category__note">${esc(category.note)}</p>` : ""}
+
+
         ${groups}
 
       </article>
