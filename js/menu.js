@@ -355,7 +355,7 @@ const MENU = {
     {
       id: "matebeto",
       name: "Matebeto (Traditional)",
-      combineSamePrice: true,
+      note: "Matebeto meals are served with nshima and a vegetable selection. Please ask our staff which vegetables are available.",
 
       items: [
 
@@ -381,13 +381,12 @@ const MENU = {
 
         {
           name: "Oxtail",
-      combineSamePrice: true,
           price: 150
         },
 
         {
           name: "Dry Fish",
-          price: 150
+          price: 200
         }
 
       ]
@@ -926,10 +925,15 @@ const MENU = {
             },
 
             {
-              name: "Rock Shandy Tropical Mango",
-              price: 70
+              name: "Rock Shandy",
+              price: 60
             },
 
+            {
+              name: "Tropical Mango",
+              price: 70
+            },
+            
             {
               name: "Mango Berry Mint",
               price: 70
@@ -1087,6 +1091,64 @@ const MENU = {
 
           ]
 
+        },
+
+        /* ------------------------------------------------------
+           WINES BY GLASS
+           ------------------------------------------------------ */
+        {
+          name: "Wines by Glass",
+          items: [
+            { name: "Four Cousins 5L Red", price: 50, desc: "A fruity, easy-drinking red with juicy berry flavours and a smooth, sweet finish." },
+            { name: "Drostdy Hof Claret 5L", price: 50, desc: "A smooth red blend with ripe berry flavours and notes of strawberry and mulberry." },
+            { name: "Cronier Natural Sweet Red", price: 50, desc: "Juicy red berries and ripe plum flavours combine with a pleasant, sweet finish." },
+            { name: "Cellar Cask Red", price: 50, desc: "An approachable red with inviting fruity notes and a smooth, easy-drinking character." }
+          ]
+        },
+
+        /* ------------------------------------------------------
+           WINE BOTTLES
+           ------------------------------------------------------ */
+        {
+          name: "Wine Bottles",
+          items: [
+            { name: "Cronier Merlot", price: 600, desc: "Soft and velvety, with ripe plum and cherry flavours and a rounded finish." },
+            { name: "Four Cousins Red", price: 400, desc: "A lively red with ripe berry aromas, gentle spice and a smooth finish." },
+            { name: "Cronier Cabernet Sauvignon", price: 600, desc: "A bold red with dark-fruit flavours, hints of blackcurrant and a structured finish." },
+            { name: "FAT bastard Gold Reserve", price: 600, desc: "A rich, full-bodied wine with concentrated dark-fruit flavours and a lingering finish." },
+            { name: "Nederburg Cabernet Sauvignon", price: 400, desc: "Rich blackcurrant flavours combine with dark fruit, firm structure and a satisfying finish." },
+            { name: "Nederburg Merlot", price: 400, desc: "A smooth red featuring ripe plum, juicy cherry and a mellow finish." },
+            { name: "Cronier Natural Sweet Red", price: 400, desc: "Silky and fruit-forward, with ripe plum, red berries and a pleasantly sweet finish." },
+            { name: "Cronier Natural Sweet White", price: 400, desc: "A refreshing sweet white with bright fruity flavours and a light, easy-drinking finish." },
+            { name: "Sunkissed Natural Sweet Red", price: 400, desc: "Juicy red-fruit flavours and gentle sweetness make this a smooth, relaxed choice." },
+            { name: "Sunkissed Natural Sweet White", price: 400, desc: "Light, fruity and refreshing, with a sweet character best enjoyed chilled." },
+            { name: "Sunkissed Natural Sweet Rosé", price: 400, desc: "A cheerful pink wine with delicate berry flavours, refreshing fruitiness and gentle sweetness." },
+            { name: "Jam Jar Natural Sweet", price: 400, desc: "Bursting with juicy berry flavours and hints of dark chocolate, balanced by refreshing acidity." },
+            { name: "4th Street Natural Sweet Red", price: 400, desc: "A light, sweet red with juicy berry flavours and a smooth, refreshing finish." },
+            { name: "Nederburg Duet", price: 450, desc: "An expressive red blend combining ripe dark-fruit flavours with gentle spice and a rounded finish." },
+            { name: "KWV Pinotage", price: 400, desc: "A distinctly South African red with ripe plum, dark berries and warming spice." },
+            { name: "KWV Merlot", price: 400, desc: "Ripe plum, raspberry and cherry notes combine with subtle oak and a soft finish." },
+            { name: "FAT bastard Cabernet Sauvignon", price: 500, desc: "A bold red with deep blackcurrant flavours, dark-fruit richness and a lingering finish." },
+            { name: "FAT bastard Merlot", price: 500, desc: "Lush and juicy, with ripe plum, cherry and subtle spice wrapped in a smooth finish." },
+            { name: "Swartland Merlot", price: 500, desc: "Rich ruby-red fruit with ripe plum, sweet black cherry and a velvety finish." },
+            { name: "Nederburg Baronne", price: 400, desc: "A generous red blend with ripe berry flavours, gentle spice and a smooth, rounded character." },
+            { name: "Nederburg Sauvignon Blanc", price: 400, desc: "Crisp and refreshing, with bright citrus, fresh green-fruit notes and a lively finish." },
+            { name: "Cronier Sauvignon Blanc", price: 500, desc: "A fresh, aromatic white with zesty citrus, crisp fruit flavours and a clean finish." }
+          ]
+        },
+
+        /* ------------------------------------------------------
+           SPARKLING WINES
+           ------------------------------------------------------ */
+        {
+          name: "Sparkling Wines",
+          items: [
+            { name: "Four Cousins Sparkling Wine", price: 400, desc: "Fruity and festive, with delicate floral aromas, lively bubbles and refreshing fruit flavours." },
+            { name: "Don Carlo Sparkling Wine", price: 400, desc: "An easy-drinking sparkling wine with bright fruit flavours and lively bubbles." },
+            { name: "J.P. Chenet Sparkling Wine", price: 400, desc: "Elegant and refreshing, with fruity aromas, delicate bubbles and a crisp character." },
+            { name: "Prospero Sparkling Wine", price: 400, desc: "Bright and celebratory, offering fresh fruit notes and a bubbly finish." },
+            { name: "Martini Sparkling Wine", price: 400, desc: "Lively and aromatic, with refreshing fruit flavours, fine bubbles and a delightful finish." }
+          ]
         }
 
       ]
