@@ -468,7 +468,7 @@ const MENU = {
           name: "Blue Island Ice Rum",
           price: 150,
           desc:
-            "Vodka, fruit tequila topped with Coke and premium rum."
+            "Vodka, fruit tequila topped with premium rum."
         }
 
       ]
